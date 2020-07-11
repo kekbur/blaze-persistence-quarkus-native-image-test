@@ -43,6 +43,11 @@
 			<version>1.5.0-Alpha5</version>
 		</dependency>
 		<dependency>
+			<groupId>com.blazebit</groupId>
+			<artifactId>blaze-persistence-integration-hibernate-5.4</artifactId>
+			<version>1.5.0-Alpha5</version>
+		</dependency>
+		<dependency>
 			<groupId>p6spy</groupId>
 			<artifactId>p6spy</artifactId>
 			<version>3.9.0</version>
