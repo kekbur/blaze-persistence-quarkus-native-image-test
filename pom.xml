@@ -16,6 +16,7 @@
 		<quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
 		<quarkus.platform.version>1.6.0.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
+		<blaze-persistence.version>1.5.0-Alpha5</blaze-persistence.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -44,12 +45,17 @@
 		<dependency>
 			<groupId>com.blazebit</groupId>
 			<artifactId>blaze-persistence-integration-quarkus</artifactId>
-			<version>1.5.0-Alpha5</version>
+			<version>${blaze-persistence.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.blazebit</groupId>
 			<artifactId>blaze-persistence-integration-hibernate-5.4</artifactId>
-			<version>1.5.0-Alpha5</version>
+			<version>${blaze-persistence.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.blazebit</groupId>
+			<artifactId>blaze-persistence-integration-jaxrs</artifactId>
+			<version>${blaze-persistence.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -100,6 +106,13 @@
 					<name>native</name>
 				</property>
 			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>com.blazebit</groupId>
+					<artifactId>blaze-persistence-entity-view-processor</artifactId>
+					<version>${blaze-persistence.version}</version>
+				</dependency>
+			</dependencies>
 			<build>
 				<plugins>
 					<plugin>

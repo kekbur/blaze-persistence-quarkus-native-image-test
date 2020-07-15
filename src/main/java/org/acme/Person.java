@@ -15,6 +15,7 @@ public class Person implements Serializable
 	private UUID id;
 	private String name;
 	private long age;
+	private byte[] bytes;
 	
 	public Person()
 	{
@@ -63,5 +64,15 @@ public class Person implements Serializable
 	public void setAge(long age)
 	{
 		this.age = age;
+	}
+	
+	public byte[] getBytes()
+	{
+		return bytes;
+	}
+	
+	public void setBytes(byte[] bytes)
+	{
+		this.bytes = bytes;
 	}
 }
